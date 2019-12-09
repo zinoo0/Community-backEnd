@@ -51,7 +51,7 @@ public class BoardController {
 		return boardRepo.findAll(Sort.by(Sort.Direction.DESC, "no"));
 	}
 
-	// �뼱�� ������ ��ȸ
+	// News Api 를 받아와 문자열 변환 
 	@RequestMapping(value = "/community/boards/news/{team}", method = RequestMethod.GET, produces = "application/json; charset=UTF-8")
 	public String getNews(@PathVariable String team) throws Exception {
 		String serviceUrl = "https://m.sports.naver.com/kbaseball/news/list.nhn?isPhoto=N&type=team&team=";
